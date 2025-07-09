@@ -76,7 +76,7 @@ HOTELES_POR_ZONA = {
 }
 
 # Crear una lista plana para el selectbox con cabeceras no seleccionables
-PLANTILLAS_HOTELES_FLAT = ["--- Escribir manualmente ---"]
+PLANTILLAS_HOTELES_FLAT = ["--- Escribir manualmente o vacío último día---"]
 for zona, hoteles in HOTELES_POR_ZONA.items():
     PLANTILLAS_HOTELES_FLAT.append(f"--- {zona.upper()} ---")
     for hotel in sorted(hoteles):
