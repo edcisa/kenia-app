@@ -406,8 +406,11 @@ def generar_pdf(data):
         return temp.name
 
 # --- INTERFAZ STREAMLIT CON PLANTILLAS REORGANIZADAS ---
-st.title("🦒 Kenia Tours: Aplicación de presupuestos")
 
+st.title("🦒 Kenia Tours: Aplicación de presupuestos")
+if "autenticado" not in st.session_state or not st.session_state["autenticado"]:
+    autenticar_usuario()
+    st.stop()
 if 'numero_presupuesto' not in st.session_state:
     st.session_state.numero_presupuesto = generar_num_presupuesto()
 
