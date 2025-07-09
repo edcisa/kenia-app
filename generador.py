@@ -7,6 +7,31 @@ import os
 import locale
 import random
 import string
+import hashlib
+
+# --- AUTENTICACIÓN SIMPLE ---
+USUARIO_AUTORIZADO = "admin"
+PASSWORD_CLARA = "keniasafari2025"
+
+def hashear_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
+
+PASSWORD_HASH = hashear_password(PASSWORD_CLARA)
+
+def autenticar_usuario():
+    st.title("🔐 Acceso restringido")
+    usuario = st.text_input("Usuario")
+    password = st.text_input("Contraseña", type="password")
+    if st.button("Entrar"):
+        if usuario == USUARIO_AUTORIZADO and hashear_password(password) == PASSWORD_HASH:
+            st.session_state["autenticado"] = True
+            st.experimental_rerun()
+        else:
+            st.error("Usuario o contraseña incorrectos.")
+
+if "autenticado" not in st.session_state or not st.session_state["autenticado"]:
+    autenticar_usuario()
+    st.stop()
 
 # --- CONFIGURACIÓN DE LOCALE ---
 try:
@@ -244,7 +269,7 @@ def generar_pdf(data):
         "El presente presupuesto tiene una vigencia de 48 horas desde su fecha de emisión. "
         "Las tarifas y disponibilidad están sujetas a confirmación al momento de la reserva."
         "La política de cancelaciones y devoluciones puede ser consultada en https://safarikeniatours.es/reembolso_devoluciones/. "
-        "Para formalizar la reserva, será necesaria la aceptación de dichos términos en nuestra web."
+        "Para formalizar la reserva, será necesaria la aceptación de dichos términos en nuestra web y el pago de una señal del 20%."
     )
     pdf.multi_cell(0, 5, texto_nota, align='C')
 
