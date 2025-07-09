@@ -25,13 +25,9 @@ def autenticar_usuario():
     if st.button("Entrar"):
         if usuario == USUARIO_AUTORIZADO and hashear_password(password) == PASSWORD_HASH:
             st.session_state["autenticado"] = True
-            st.experimental_rerun()
         else:
             st.error("Usuario o contraseña incorrectos.")
-
-if "autenticado" not in st.session_state or not st.session_state["autenticado"]:
-    autenticar_usuario()
-    st.stop()
+       
 
 # --- CONFIGURACIÓN DE LOCALE ---
 try:
