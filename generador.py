@@ -11,7 +11,7 @@ import hashlib
 
 # --- AUTENTICACIÓN SIMPLE ---
 USUARIO_AUTORIZADO = "admin"
-PASSWORD_CLARA = "keniasafari2025"
+PASSWORD_CLARA = "1129"
 
 def hashear_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
