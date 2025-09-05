@@ -61,6 +61,7 @@ PLANTILLAS_ACTIVIDADES = [
     "Viaje de Amboseli a Naivasha, llegada al hotel y tour en barco por el lago para ver hipopótamos y aves.",
     "Viaje de Nairobi a Amboseli, safari al atardecer y vistas al Kilimanjaro.",
     "Viaje de Nairobi a Masái Mara (4-5 horas). Check-in en el hotel y safari al atardecer.",
+    "Viaje de Nakuru a Masái Mara. Check-in en el hotel y safari durante el atardecer.",
     "Viaje de Naivasha al Parque Nacional de Amboseli, con las vistas del Kilimanjaro.",
     "Visita a los proyectos sociales de Soweto Youth Initiative y Under Lea’s Trust.",
     "Visita a un poblado Masái para conocer su cultura. Posteriormente, viaje hacia el Lago Nakuru.",
