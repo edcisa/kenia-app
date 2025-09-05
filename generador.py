@@ -264,7 +264,7 @@ def generar_pdf(data):
     pdf.set_text_color(150, 135, 115)
     texto_nota = (
         "El presente presupuesto es meramente informactivo, todas las reservas deben realizarse a través de la web. El presupuesto una vigencia de 48 horas desde su fecha de emisión. "
-        "Las tarifas y disponibilidad están sujetas a confirmación al momento de la reserva de la compañía. Registration number: BN-JRCGMEDV, 20054, 47791, Nairobi, 00200, KE"
+        "Las tarifas y disponibilidad están sujetas a confirmación al momento de la reserva de la compañía. Registration number: BN-JRCGMEDV, 20054, 47791, Nairobi, 00200, KE "
         "La política de cancelaciones y devoluciones puede ser consultada en https://safarikeniatours.es/reembolso_devoluciones/. "
         "Para formalizar la reserva, será necesaria la aceptación de dichos términos en nuestra web."
     )
